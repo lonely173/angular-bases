@@ -2,6 +2,7 @@
   "name": "bases",
   "version": "0.0.0",
   "scripts": {
+    "dev":"vite",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

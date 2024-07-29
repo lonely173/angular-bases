@@ -1,0 +1,38 @@
+<h1> {{name}}</h1>
+<dl>
+
+  <td>Nombre:</td>
+  <dd> {{name}} </dd>
+
+  <td>Edad:</td>
+  <dd> {{age}} </dd>
+
+  <td>Metodo:</td>
+  <dd> {{ getHeroDescription()}} </dd>
+
+  <td>Capitalizado:</td>
+  <dd> {{capitalizedName}} </dd>
+</dl>
+
+<!-- <ul>
+<li>Barcelona</li>
+<li>Lima</li>
+</ul> -->
+<!--  *ngFor es una directiva de for/ ciclo for para el lado del template(html) -->
+<ul class="mt-2 list-group" >
+  <li *ngFor="let city of cities" class="list-group-item">
+    {{city}}
+  </li>
+  </ul>
+<!--  *ngIf es una directiva de condicion de if -->
+ <button
+ *ngIf="name !== 'Spiderman'" (click)="changeHero()" class="btn btn-primary mx-2"> <!-- mx es margin -->
+  Cambiar nombre
+</button>
+
+<button *ngIf="age !== 25" (click)="changeAge()" class="btn btn-primary">
+  Cambiar edad
+</button>
+<button (click)="resetForm()" class="btn btn-primary mx-2">
+  Reset
+</button>
